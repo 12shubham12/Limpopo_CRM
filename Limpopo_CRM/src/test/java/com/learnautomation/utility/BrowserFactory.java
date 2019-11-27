@@ -9,6 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class BrowserFactory 
 {
+	//below is the one method which take care of all the browsers
 	public static WebDriver startApplication(WebDriver driver, String browserName, String appURL){
 		if(browserName.equals("Chrome")){
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
@@ -27,7 +28,7 @@ public class BrowserFactory
 		}
 		//after else statement write below code for launching the url
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.get(appURL);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		return driver;
