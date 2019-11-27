@@ -6,7 +6,6 @@ import com.CRM.pages.BaseClass;
 import com.CRM.pages.LoginPage;
 
 public class LoginTestCRM extends BaseClass{
-
 	
 	@Test(priority=1)
 	public void loginApp(){		
@@ -17,7 +16,7 @@ public class LoginTestCRM extends BaseClass{
 		/* We are achieving abstraction by using the line loginPage.loginToCRM(“shuraj93@gmail.com”,”asd”);
 		Coz we are just showing the essential features and hiding the background details
 		(like what locators we have used, what strategy we have used)*/
-		//loginPage.loginToFacebook("shuraj93@gmail.com", "asd");
+		///loginPage.loginToFacebook("shuraj93@gmail.com", "asd");
 		
 		logger.info("Starting Application");
 		loginPage.loginToCRM(excel.getStringData("Login", 0, 0),excel.getStringData("Login", 0, 1));
